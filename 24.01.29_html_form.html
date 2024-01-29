@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form 사용 -->
+    <form>
+        <!-- label 사용 (input의 이름표) -->
+        <label for=""></label>
+        안녕, 1월 29일. 24년 1월도 곧 끝나가는 구나<br>
+        <input type="text" name="myName" value="안녕하세요, 이수현입니다." autocomplete="on">
+        <!-- value : 초기값 -->
+    </form>
+    <!-- button 사용 -->
+    <form action="">
+        <!-- maxlength : 문자 수 최대 길이 -->
+        <!-- minlength : 문자 수 최소 길이 -->
+        <input type="text" value="hello" maxlength="10">
+        <button><img src="" alt=""><span></span>hello</button>
+        <input type="text" required> <!-- 양식 전송을 위해 필수적으로 입력 -->
+        <input type="text" disabled> <!-- 비활성화 -->
+        <input type="text" readonly> <!-- 수정 불가, 읽기 전용 -->    
+        <!-- button : 기본 행동 없음, js와 연결 -->
+        <button type="button">button초기화</button>
+    </form>
+    <form>
+        <!-- button / reset / submit -->
+        <input type="button" value="버튼">
+        <input type="reset" value="초기화">
+        <input type="submit" value="전송">
+        <button type="button">버튼</button>
+        <button type="reset">초기화</button>
+        <button type="submit">전송</button>
+        <!-- checkbox : 단일값을 선택 or 해제하는 체크박스 -->
+        <fieldset>
+            <legend>사용 기술</legend>
+            <input type="checkbox" name="html" id="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="css" id="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="js" id="js">
+            <label for="js">JavaScript</label>
+            <input type="checkbox" name="python" id="python">
+            <label for="python">Python</label>
+            <input type="checkbox" name="django" id="django">
+            <label for="django">Django</label>
+        </fieldset>
+        <!-- radio : 여러개 중 하나의 값만 선택 -->
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="male" id="male">
+              <label for="male">남성</label>
+            <input type="radio" name="gender" value="females" id="female">
+              <label for="female">여성</label>
+              <input type="radio" name="gender" value="no" id="no">
+              <label for="no">선택 안함</label>
+          </fieldset>
+        <!-- file : 파일 지정 -->
+        <label for="profile">프로필 이미지</label>
+        <input 
+	        type="file"
+	        id="profile"
+	        name="profile"
+            accept="image/png, image/jpeg"
+        >
+        <!-- number : 숫자 입력, 화살표 컨트롤 제공 -->
+        <label for="num">숫자입력 (10-100):</label>
+        <input 
+            type="number" 
+            id="num" 
+            name="number"
+            min="10" 
+            max="100" 
+            step="10"
+        >
+        <!-- optgroup : option 요소를 optgroup 요소 안에 배치하면 드롭다운 내에서 옵션그룹을 나눌 수 있음 -->
+        <label for="animals">동물을 선택하세요 : </label>
+        <select id="animals">
+            <optgroup label="포유류">
+                <option>원숭이</option>
+                <option>개</option>
+                <option>고양이</option>
+            </optgroup>
+            <optgroup label="파충류">
+                <option>도마뱀</option>
+                <option>뱀</option>
+            </optgroup>
+        </select>
+    </form>
+    <!-- textarea : 여러줄의 text를 입력받을 수 있음 -->
+    <textarea
+	rows="10" 
+	cols="50" 
+	minlength="10"
+	maxlength="100" 
+	placeholder="10자 이상 100자 이하로 내용을 입력해주세요"></textarea>
+    <!-- 
+        textarea 크기 비활성화 CSS 
+        textarea{
+	        resize:none;
+        }
+     -->
+    <!-- submit : 서버로 양식 제출 -->
+    <input type="submit" value="submit초기화">
+    <header></header>
+    <script>
+        let val = "";
+    </script>
+    <!-- action : 양식 처리 프로그램의 URL -->
+    <form action="">
+        <fieldset>
+            <!-- legend : 그룹 제목 -->
+            <legend>제목</legend>
+        </fieldset>
+        <!-- fieldset : from 요소 묶기 -->
+        <fieldset>1</fieldset>
+        <fieldset>2</fieldset>
+        <fieldset>3</fieldset>
+        <label for=""></label>
+        <!-- h : 글자 크기 -->
+        <h1>글자크기</h1>
+        <h2>글자크기</h2>
+        <h3>글자크기</h3>
+        <h4>글자크기</h4>
+        <h5>글자크기</h5>
+        <h6>글자크기</h6>
+    <!-- img 첨부 -->
+    <img src="24.01.29_test.png" alt="개발자가 줌을 켜고 엄지를 치켜 세우고 있다.">
+</body>
+</html>
