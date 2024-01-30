@@ -1,0 +1,102 @@
+p {
+    color:yellow; 
+    background-color:black;
+}
+
+/* 1. 전체 선택자 */
+* {
+	margin:0;
+	padding:0;
+}
+
+/* 2. 타입(유형) 선택자 (태그 선택자, 요소 선택자) */
+h1 {
+	font-weight:bold;
+}
+p{
+	font-size: 24px;
+}
+
+/* 3. 아이디 선택자 */
+/* <header id="header">
+...
+</header> */
+#header {
+	padding: 10px;
+}
+
+/* 4. 클래스 선택자 */
+/* <h1 class="fc-red">hello wolrd</h1>
+<p>Lorem ipsum dolor sit amt</p>
+<p class="fc-red">Lorem ipsum dolor sit amt</p> */
+.fc-red {
+	color: red;
+}
+
+/* 5. 특성 선택자 */
+[type="button"]{
+	border:0;
+	cursor:pointer;
+}
+[class="btn"]{
+	color:#fff;
+	background: royalblue;
+}
+
+/* 6. 그룹 선택자 */
+/* h1 {font-weight:bold;}
+h2 {font-weight:bold;}
+h3 {font-weight:bold;}
+h4 {font-weight:bold;}
+h5 {font-weight:bold;}
+h6 {font-weight:bold;} */
+h1, h2, h3, h4, h5, h6{ font-weight:bold;}
+
+/* 7. 복합 선택자 */
+/* 자손 선택자 */
+section p {
+    border: 3px solid skyblue;
+}
+/* 자식 선택자 */
+section > p{
+    color:royalblue;
+}
+/* 일반 형제 선택자 */
+section ~ p{
+    text-decoration:underline;
+}
+/* 인접 형제 선택자 */
+section + p{
+    background:yellow;
+}
+
+/* 가상 클래스 */
+/* 
+:link = 방문하지 않은 링크 
+:visited = 방문한 링크 
+:hover = 마우스 커서를 올려 놓았을 때 
+:active = 마우스로 클릭했을 때 
+:focus = 포커스 되었을때 
+*/
+/* 구조적 가상 선택자 */
+/* 2번째 li */
+li:nth-child(2) {
+    color: lime;
+  }
+  /* 홀수번째 li */
+  li:nth-child(odd) {
+    color: lime;
+  }
+  /* 짝수번째 li */
+  li:nth-child(even) {
+    color: lime;
+  }
+  /* 2n+1번째 li. (n은 0부터 1씩 증가합니다)*/
+  li:nth-child(2n+1) {
+    color: lime;
+  }
+/* 부정 선택자 */
+/* li 중 첫번째가 아닌 li */
+li:not(:first-child){
+	margin-top:20px;
+}

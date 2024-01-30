@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="24.01.30_style.css">
+    <style>
+        body a {
+            color: blue;
+        }
+
+        a[href] {
+            color: green;
+        }
+
+        p#myTxt.txt {}
+
+        p::before {
+            content: 'hello';
+        }
+
+        p::after {
+            display: inline-block;
+            content: '';
+        }
+
+        .test {
+            /* padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px; */
+            padding: 10px 10px 10px 10px;
+            padding: 10px 30px 10px;
+            padding: 10px 30px;
+            padding: 10px;
+            background-color: royalblue;
+        }
+
+        .parent {
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="test">hello</div>
+    </div>
+
+    <p id="myTxt" class="txt">
+        <strong>Lorem</strong> ipsum dolor sit, amet consectetur adipisicing elit. Soluta, debitis velit minus, minima,
+        temporibus maiores totam consequuntur quod obcaecati accusantium repellendus! Doloremque, autem? Fugit corrupti
+        laboriosam tenetur ad unde laborum!
+        <span></span>
+    </p>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+
+    <a href="https://www.netflix.com">hello this is link</a>
+
+    <input type="text">
+    <div id="myDiv" class="box-txt">
+        <p class="myP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni consequuntur vel quod ratione,
+            inventore sit
+            iure
+            veritatis, veniam perspiciatis unde, minima nesciunt! Reiciendis suscipit, optio voluptatum ipsam molestias
+            sit
+            nulla.</p>
+    </div>
+    <div class="myP">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsa est, dignissimos velit magnam modi
+        dolore, nostrum iure expedita aliquam officia soluta culpa sed et tempore at accusamus natus rem!
+    </div>
+    <div>
+        <div class="myP myPMore">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga repellat adipisci consequuntur commodi quo
+            iure minus quos dolores quas voluptatibus velit, reiciendis ut. Nostrum ratione repellat nemo dicta
+            assumenda aspernatur?
+        </div>
+    </div>
+
+</body>
+
+</html>
