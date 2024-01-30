@@ -1,0 +1,35 @@
+/* 
+
+width : 요소의 너비 설정
+height : 요소의 높이 설정
+> padding : 단축 속성
+> padding-top padding-right padding-bottom padding-left 순서
+> margin : 단축 속성
+> margin-top margin-right margin-bottom margin-left 순서
+border : 테두리 설정
+box-sizing : content-box (기본값)
+overflow, overflow-x, overflow-y : 박스보다 콘텐츠가 더 커 콘텐츠가 넘칠 경우 어떻게 처리할지를 지정
+border-radius : 상자 모서리 처리 (둥글게)
+border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius
+opacity : 불투명도
+
+*/
+
+/* padding */
+p{
+	padding: 10px; /* top, right, bottom, left 모두 10px */
+	padding: 10px 20px; /* top, bottom :10px,  left, right:20px */
+	padding: 10px 20px 30px; /* top:10px, left,right:20px, bottom:30px */
+	padding: 10px 20px 30px 40px;
+}
+
+/* margin 가운데 */
+p{
+	width: 400px;
+	margin: auto; 
+}
+/* margin 오른쪽 */
+p{
+	width: 400px;
+	margin: auto 0 auto auto;
+}
