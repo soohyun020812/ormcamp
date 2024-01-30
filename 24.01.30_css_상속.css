@@ -1,0 +1,13 @@
+.style1 h1{color:plum;}
+.style1 h2{color:plum;}
+.style1 p{color:plum;}
+
+.style2 h1,
+.style2 h2,
+.style2 p{color: orange;}
+
+.style3{
+	color: pink;
+    border: 5px solid violet;
+}
+h1 { border: inherit; }
