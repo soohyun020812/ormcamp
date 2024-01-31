@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위니브로그인</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a,
+        p {
+            font-size: 12px;
+            line-height: 15px;
+        }
+        a {
+            text-decoration: none;
+            color: #767676;
+        }
+        img {
+            vertical-align: top;
+        }
+        .a11y {
+            position: absolute;
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .cont-login {
+            width: 350px;
+            padding: 18px 16px 17px;
+            border: 1px solid #DBDBDB;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .link-login {
+            display: block;
+            padding: 14px 0 11px 0;
+            margin: 16px 0;
+            border-radius: 4px;
+            text-align: center;
+            background-color: #711BFF;
+            color: white;
+        }
+        .link-login img {
+            margin-right: 8px;
+        }
+        .link-id::after {
+            content: '';
+            display: inline-block;
+            height: 12px;
+            width: 1px;
+            margin-left: 5px;
+            background-color: #767676;
+            vertical-align: -2px;
+        }
+        .img-find {
+            vertical-align: -3px;
+        }
+        .img-join {
+            margin-left: 125px;
+        }
+    </style>
+</head>
+<body>
+    <article class="cont-login">
+        <h1 class="a11y">위니브에 로그인하기</h1>
+        <p class="txt-login">더 편리해진 위니브에 오신 것을 환영합니다.</p>
+        <a href="#none" class="link-login">
+            <img src="24.01.31_img/weniv-logo.png" alt="weniv">
+            로그인
+        </a>
+        <img src="24.01.31_img/icon-lock.png" alt="" class="img-find">
+        <a href="#none" class="link-id">아이디</a>
+        <a href="#none">비밀번호찾기</a>
+        <img src="24.01.31_img/icon-user.png" alt="" class="img-find img-join">
+        <a href="#none">회원가입</a>
+    </article>
+</body>
+</html>
