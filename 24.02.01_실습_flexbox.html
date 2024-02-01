@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+    .flex-container-r {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        align-items: center; 
+        height: 200px; 
+        background-color: #f0f0f0;
+    }
+    .flex-item1 {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    .flex-item2 {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    .flex-item3 {
+        width: 100px;
+        height: 100px;
+        background-color: lawngreen;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    .flex-container-c {
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+        align-items: center;
+        height: 500px; 
+        background-color: #f0f0f0;
+    }
+    .flex-items1 {
+        width: 100px; 
+        height: 100px; 
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        line-height: 100px; 
+        margin: 5px;
+    }
+    .flex-items2 {
+        width: 100px; 
+        height: 100px; 
+        background-color: gray;
+        color: #fff;
+        text-align: center;
+        line-height: 100px; 
+        margin: 5px;
+    }
+    .flex-items3 {
+        width: 100px; 
+        height: 100px; 
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        line-height: 100px; 
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+  <div class="flex-container-r">
+    <div class="flex-item1">Item 1</div>
+    <div class="flex-item2">Item 2</div>
+    <div class="flex-item3">Item 3</div>
+  </div>
+
+  <div class="flex-container-c">
+    <div class="flex-items1">Item 1</div>
+    <div class="flex-items2">Item 2</div>
+    <div class="flex-items3">Item 3</div>
+  </div>
+</body>
+</html>
