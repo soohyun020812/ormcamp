@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* 50% > 100% 로 변하면서 좌표로 이동 (x, y) */
+
+        /* @keyframes 애니 {
+            50% {
+                transform: translate(200px, 0);
+            }
+            100% {
+                transform: translate(200px, 200px);
+            }
+        }
+        div {
+            background: red;
+            width:  100px;
+            height: 100px;
+            animation: 애니 2s;
+            transition: all 1s;
+        }
+        div:hover {
+            background: dodgerblue;
+            width: 200px;
+            height: 200px;
+        } */
+        .btn {
+            border: 4px solid lightcoral;
+            border-radius:  4px;
+            padding: 30px 60px;
+            background: none;
+            color: lightcoral;
+            font-size: 32px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            color: white;
+            border: 4px solid plum;
+        }
+        .btn::before {
+            content: "!!";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: lightcoral;
+            z-index: -1;
+            border-radius: 100px 100px 0px 0px;
+            height: 0px;
+            transition: all 0.3s;
+        }
+        .btn:hover.btn::before {
+            height: 120px;
+            background: plum;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Click Me ✨</button>
+</body>
+</html>
