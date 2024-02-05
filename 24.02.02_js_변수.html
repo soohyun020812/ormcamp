@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 scope
+        function main() {
+            var x = 'hi';
+        }
+        console.log(x);
+
+        // 함수 scope ex
+        function main() {
+            var x = 'hello'
+            if (true) {
+                var x = 'hi';
+            }
+            console.log(x); // 'hello'
+        }
+        main();
+
+        // 블록 scope
+        // var는 함수 scope를 갖기에 x가 정상 출력
+        function main() {
+            if (true) {
+                var x = 'hi';
+            }
+            console.log(x); // 'hi'
+        }
+        main();
+
+        // var -> let
+        function main() {
+            if (true) {
+                let x = 'hi';
+            }
+            console.log(x); // 'hi'
+        }
+        main();
+
+        // 호이스팅 var
+        console.log(num);
+        var num = 10;
+        console.log(num);
+
+        // 호이스팅 let
+        console.log(num);
+        let num = 10;
+        console.log(num);
+    </script>
+</body>
+</html>
