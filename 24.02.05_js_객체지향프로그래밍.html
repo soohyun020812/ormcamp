@@ -1,0 +1,137 @@
+<!-- 
+// 추상화 (강사님 ex)
+const me = {
+    name : '한재현',
+    address : '제주도 제주시 인다 1길',
+    phoneNum : '010-8000-0000',
+    canWalk : function(){
+        console.log('재현이가 걷는다.');
+    },
+    teaching : function(student){
+        student.levelUp();
+    }
+}
+
+// 새로운 객체
+const student = {
+    level: 1,
+    levelUp : function(){
+        this.level++;
+    }
+}
+
+// 생성자(new)
+// 새로운 인스턴스 객체를 만듬
+let myArr = new Array(1,2,3);
+let myArr2 = new Array(4,5,6);
+
+myArr2.length
+myArr.length
+
+myArr.forEach(item=>{
+    console.log(item);
+})
+
+myArr2.forEach(item => {
+    console.log(item);
+})
+
+function NewFactory(name){
+    this.name = name;
+    this.sayYourName = function(){
+        console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+    }
+}
+
+robot1 = new NewFactory('브랜든')
+
+this.sayYourName = function(){
+    console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+}
+// 100개의 객체 생성 시 100개의 함수 생성
+// = 프로토타입 (prototype은 특정 객체에 대한 참조)
+function NewFactory2(name){
+    this.name = name;
+}
+NewFactory2.prototype.sayYourName = function(){
+    console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+}
+
+function Test(){};
+const obj = new Test();
+obj.__proto__ === Test.prototype
+
+Q. prototype 과 __proto__ 는 다른건가?
+A. prototype은 오직 function안에 존재하는 참조값
+__proto__  는 객체 안에 존재하는 숨겨진 프로퍼티
+인스턴스는 __proto__를 통해 생성자 함수의 prototype에 접근하여 필요한 여러가지 값과 메서드를 사용할 수 있음
+
+// 객체 상속
+const obj = {
+    name: 'test'
+}  
+console.log(obj.hasOwnProperty('name')); 
+const arr = [1,2,3];
+console.log(arr.hasOwnProperty('name'));
+
+// 자바스크립트 타입의 기본 상속 : Object 타입
+console.log(Array.prototype.__proto__ === Object.prototype);
+console.log(Number.prototype.__proto__ === Object.prototype);
+console.log(String.prototype.__proto__ === Object.prototype);
+console.log(Math.__proto__ === Object.prototype);
+
+// 부모 역할 생성자 함수
+function Parent() {
+    this.name = '재현';
+}
+Parent.prototype.rename = function (name) {
+    this.name = name;
+}
+Parent.prototype.sayName = function () {
+    console.log(this.name);
+}
+
+// 자식 역할 생성자 함수
+function Child() {
+    Parent.call(this);
+}
+Child.prototype = Object.create(Parent.prototype); // 지정된 프로토타입 객체를 갖는 새 객체를 만듬
+Child.prototype.canWalk = function () {
+    console.log('now i can walk!!');
+}
+
+// class 키워드 + 이름 + 중괄호
+// function Robot(name) {
+    // this.name = name;
+    // }
+    
+    // Robot.prototype.sayYourName = function () {
+        // console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+    // }
+    
+    class Robot {
+        // 클래스의 생성자 함수, 하나의 클래스는 하나의 생성자만 정의할 수 있음 
+            // 그리고 생성자 함수는 new 키워드가 호출될때 자동으로 실행
+        constructor(name) {
+            this.name = name;
+        }
+        // 메소드를 정의, 메소드는 클래스가 생성한 인스턴스를 통해 사용할 수 있음
+        sayYourName() {
+            console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+        }
+    }
+
+// class 상속 
+class BabyRobot extends Robot {
+    constructor(name) {
+        super(name);
+        this.ownName = '아이크';
+    }
+
+    sayBabyName() {
+				// 또한 상속을 받게되면 부모 클래스의 메소드를 사용할 수 있게 됨, 때문에 this로 접근 할 수 있음
+        this.sayYourName();
+        console.log('Suceeding you, Father!');
+    }
+} 
+-->
