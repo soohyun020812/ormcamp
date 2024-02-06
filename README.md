@@ -13,4 +13,4 @@
 4. Java Script
 
 >**강의 정리**
-https://selfnotes.tistory.com
+* https://selfnotes.tistory.com
