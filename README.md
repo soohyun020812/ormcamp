@@ -11,3 +11,6 @@
 2. HTML
 3. CSS
 4. Java Script
+
+>**강의 정리**
+https://selfnotes.tistory.com
