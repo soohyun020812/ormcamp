@@ -1,0 +1,39 @@
+.a11y {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn-common {
+    padding: 21px 49px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #5B2386;
+    background-color: #FCEE21;
+    border-radius: 56px;
+    border: none;
+}
+
+.btn-common.white {
+    background-color: #fff;
+}
