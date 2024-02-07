@@ -1,0 +1,121 @@
+body {
+    padding: 194px 0 70px;
+    background: #5B2386;
+    color: #fff;
+    text-align: center;
+}
+
+/* header css */
+.cont-header {
+    margin-bottom: 102px;
+}
+
+.cont-header .tit-header {
+    position: relative;
+    margin-bottom: 125px;
+}
+
+.cont-header .tit-header::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -128px 0 0 -128px;
+    width: 256px;
+    height: 256px;
+    background-image: url(../images/title_bg.png);
+}
+
+.cont-header .box-quote {
+    position: relative;
+    max-width: 413px;
+    padding: 0 40px;
+    margin: 78px auto 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.cont-header .box-quote::before,
+.cont-header .box-quote::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 37px;
+    height: 32px;
+}
+
+.cont-header .box-quote::before {
+    left: 0;
+    background-image: url(../images/txt-left.png);
+}
+
+.cont-header .box-quote::after {
+    right: 0;
+    background-image: url(../images/txt-right.png);
+}
+
+.cont-header .box-quote strong {
+    font-size: 24px;
+}
+
+/* main css */
+.cont-main {
+    margin: 102px 0 130px;
+}
+
+.cont-main .txt-field,
+.cont-main .txt-time {
+    font-size: 24px;
+    margin-bottom: 27px;
+}
+
+.txt-field input,
+.txt-time input {
+    width: 228px;
+    padding: 17px 41px 16px 49px;
+    margin: 0 17px;
+    border-radius: 7px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.cont-main form .btn-common {
+    position: relative;
+    margin-top: 80px;
+}
+
+.cont-main form .btn-common::after {
+    position: absolute;
+    top: 30px;
+    right: -80px;
+    content: '';
+    width: 64px;
+    height: 72px;
+    background-image: url(../images/hand.png);
+}
+
+.cont-main .cont-result {
+    margin-top: 147px;
+}
+
+.cont-main .cont-result p {
+    margin-bottom: 127px;
+    line-height: 92px;
+    font-size: 24px;
+}
+
+.cont-main .cont-result strong {
+    vertical-align: top;
+    font-size: 72px;
+}
+
+.cont-main .cont-result .white {
+    margin-left: 18px;
+}
+
+/* footer css */
+.cont-footer small {
+    display: block;
+    margin-top: 20px;
+}
