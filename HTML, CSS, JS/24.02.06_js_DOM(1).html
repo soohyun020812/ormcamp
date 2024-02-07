@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parentElement">
+        <span id="childElement">hello guys~</span>
+    </div>
+    <ul></ul>
+    <button>Make me MORE!</button>
+
+    <div class="parent"></div>
+    <button class="blue">hello</button>
+    <p id="myTxt" class="my-txt">hello</p>
+    <p id="myTxt" class="my-txt">hello</p>
+    <p id="myTxt" class="my-txt">hello</p>
+    <script>
+        // parentElement.insertBefore(target, location); 
+        // = target요소를 parentElement의 자식인 location 위치 앞으로 이동
+        var span = document.createElement("span");
+        var sibling = document.getElementById("childElement");
+        var parentDiv = document.getElementById("parentElement");
+        parentDiv.insertBefore(span, sibling);
+
+        const myBtn = document.querySelector("button");
+        const myUl = document.querySelector("ul");
+
+        myBtn.addEventListener('click', function () {
+            for (let i = 0; i < 5; i++) {
+                const myLi = document.createElement('li');
+                const btnDel = document.createElement('button');
+                const btnTxt = document.createTextNode('버튼');
+
+                btnDel.append(btnTxt);
+                btnDel.addEventListener('click', () => {
+                    myLi.remove();
+                });
+                myLi.append('삭제하기: ', btnDel);
+                myUl.appendChild(myLi);
+            }
+        });
+
+        const myP = document.createElement('p');
+
+        // const myBtn = document.querySelector("button");
+        // const myUl = document.querySelector("ul");
+
+        // myBtn.addEventListener('click', function () {
+            // for (let i = 0; i < 5; i++) {
+                // const myLi = document.createElement('li');
+                // myUl.appendChild(myLi);
+            // }
+        // })
+
+        myP.addEventListener('click', function () {
+            console.log('click!!');
+        });
+
+        document.querySelector('.parent').append(myP, 'hello!!!!');
+        myP.append(document.createTextNode('hello world'));
+
+        // const myBtn = document.querySelector("button");
+
+        // myBtn.addEventListener('click', function () {
+
+            // blue 라는 클래스의 속성 값을 지정 할 수 있습니다.
+            // console.log(myBtn.classList.contains("blue"));
+
+                // myBtn.classList.remove("blue"); 클래스를 제거
+                // myBtn.classList.toggle("blue"); 클래스를 토글, 없으면 넣어주고 있으면 제거
+                // myBtn.classList.contains("blue"); 해당하는 클래스가 있는지 확인
+        // });
+
+        // const myEl = document.getElementsByTagName('p');
+
+        // myEl[0].innerHTML = 'hello world';
+
+        // myEl[0].addEventListener('click', function () {
+            // console.log('click!!');
+        // })
+    </script>
+</body>
+</html>
