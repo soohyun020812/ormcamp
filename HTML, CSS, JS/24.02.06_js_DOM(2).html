@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 주석 -->
+    <article class="cont">
+        <h1>안녕하세요 저는 이런 사람입니다.</h1>
+        <p>지금부터 자기소개 올리겠습니다</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt incidunt voluptates laudantium fugit, omnis
+        dolore itaque esse exercitationem quam culpa praesentium, quisquam repudiandae aut. Molestias qui quas ea iure
+        officiis.
+        <strong>감사합니다!</strong>
+    </article>
+
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+    <strong class="sayHi">
+        반갑습니다.
+    </strong>
+
+    <script>
+        const cont = document.querySelector(".cont");
+        console.log(cont.firstElementChild); // 첫번째 자식을 찾습니다.
+        console.log(cont.lastElementChild); // 마지막 자식을 찾습니다.
+        console.log(cont.nextElementSibling); // 다음 형제요소를 찾습니다.
+        console.log(cont.previousSibling); // 이전 형제노드를 찾습니다.
+        console.log(cont.children); // 모든 자식요소를 찾습니다.
+        console.log(cont.childNodes); // 모든 자식노드를 찾습니다.
+        console.log(cont.parentElement); // 부모 요소를 찾습니다.
+        // 자기 자신부터 시작해 부모로 타고 올라가며 가장 가까운 cont 클래스 요소를 찾습니다. 단, 형제요소는 찾지 않습니다.
+        console.log(cont.querySelector('strong').closest('.cont').innerHTML);
+
+        const sayHi = document.querySelector('.sayHi');
+        sayHi.insertAdjacentHTML('beforebegin', '<span>안녕하세요 저는</span>');
+        sayHi.insertAdjacentHTML('afterbegin', '<span>이수현입니다</span>');
+        sayHi.insertAdjacentHTML('beforeend', '<span>면접 오시면</span>');
+        sayHi.insertAdjacentHTML('afterend', '<span>치킨 사드릴게요</span>');
+
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        const myInput = document.querySelector("input");
+
+        myInput.addEventListener('input', function () {
+            myP.textContent = myInput.value;
+        });
+
+        myP.innerHTML = "I'm Strong!! hello";
+    </script>
+</body>
+</html>
