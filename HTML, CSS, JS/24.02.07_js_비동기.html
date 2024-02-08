@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 자바스크립트 코드는 기본적으로 순서대로 (동기적으로) 실행
+        console.log(1);
+        console.log(2);
+        [3, 4, 5].forEach(i => console.log(i));
+        console.log(6);
+        
+        console.log(1);
+        // setTimeout으로 콜백함수가 일정시간 뒤에 실행하도록 코드를 작성
+        // 순서대로 실행되지 않음 (비동기적으로 실행)
+        // 이러한 비동기 실행 코드는 setInterval, addEventListener 와 같은 함수가 있음
+        setTimeout(() => console.log(2), 100);
+        [3, 4, 5].forEach((i) => console.log(i));
+        console.log(6);
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let result;
+
+        function xhrRequest() {
+            const requestObj = new XMLHttpRequest();
+            requestObj.open(
+                "GET",
+                "https://jsonplaceholder.typicode.com/posts/1"
+            );
+            requestObj.onreadystatechange = () => {
+                if (
+                    requestObj.readyState == 4 &&
+                    requestObj.status == "200"
+                ) {
+                    result = requestObj.responseText;
+                    console.log(result);
+                }
+            };
+            requestObj.send();
+        }
+
+        xhrRequest();
+        console.log(result);
+    </script>
+</body>
+</html>
+
+<!--
+XHR 객체를 생성
+const requestObj = new XMLHttpRequest();
+requestObj.open('GET', 'url');
+요청을 초기화, 통신방법과 요청을 발신할 대상의 주소를 전달
+
+requestObj.onreadystatechange = () => { // readystate 가 변화하면 실행되는 이벤트리스너
+        readystate : 요청을 보내는 클라이언트의 상태를 의미
+
+    readystate의 종류
+    * 0 (UNSENT) - XHR 객체가 생성되었지만 아직 초기화되지 않음
+    * 1 (OPENED) - open() 함수가 호출되어 요청이 초기화
+    * 2 (HEADERS_RECEIVED) - send()함수가 호출
+    * 3 (LOADING) - 데이터를 다운받는 중
+    * 4 (DONE) - 통신 완료
+    if (requestObj.readyState == 4 && requestObj.status == "200") {
+
+        const result = requestObj.responseText;
+
+    }
+};
+requestObj.send(); // 서버로 요청, send 메소드가 실행되어야만 우리가 위에서 설정한 내용들이 의미를 가지게 됨
+-->
