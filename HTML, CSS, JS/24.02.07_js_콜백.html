@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function searchUser(userName, password, onSuccess) {
+            const requestObj = new XMLHttpRequest();
+            requestObj.open('GET', 'users.json');
+            requestObj.onreadystatechange = () => {
+                if (requestObj.readyState == 4 && requestObj.status == "200") {
+                    // json 데이터를 자바스크립트 객체로 만드는 과정
+                    const result = JSON.parse(requestObj.responseText)
+
+                    // json 데이터와 일치하는지 검색하는 메소드
+                    const info = result.user.find((item) => {
+                        return item.userName === userName && item.password === password
+                    });
+
+                    if (info) {
+                        onSuccess(info);
+                    } else {
+                        console.error('일치하는 유저가 없습니다!');
+                    }
+
+                }
+            };
+            requestObj.send();
+        }
+
+        function sayHi(user, onSuccess) {
+            const requestObj = new XMLHttpRequest();
+            requestObj.open('GET', 'greetings.json');
+            requestObj.onreadystatechange = () => {
+                if (requestObj.readyState == 4 && requestObj.status == "200") {
+
+                    const result = JSON.parse(requestObj.responseText);
+
+                    // json 데이터와 일치하는지 검색하는 메소드
+                    const info = result.greetings.find((item) => {
+                        return item.userName === user.userName
+                    });
+
+                    if (info) {
+                        alert(info.greetings);
+                        onSuccess(info);
+                    } else {
+                        console.error('일치하는 인사말 없습니다!');
+                    }
+
+                }
+            };
+            requestObj.send();
+        }
+
+        const userName = prompt('이름을 입력하세요');
+        const password = prompt('비밀번호를 입력하세요');
+
+        searchUser(userName, password, (info) => {
+            sayHi(info, (info) => {
+                second(info, () => {
+
+                });
+            });
+        });
+    </script>
+</body>
+</html>
