@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>나의 todo list</h1>
+    <p>1. 오늘 저녁에 집 근처에 새로 생긴 쭈꾸미 집에서 쭈꾸미 볶음을 먹겠다.<button type="button">삭제</button></p>
+    <p>2. 후식으로 초코맛 아이스크림을 먹겠다.<button type="button">삭제</button></p>
+    <p>3. 자기 전에는 꼭 양치질을 하고 자야한다.<button type="button">삭제</button></p>
+
+    <script>
+        const txts = document.querySelectorAll('p');
+        const btns = document.querySelectorAll('button');
+
+        txts.forEach((item) => {
+            item.addEventListener('click', () => {
+                // console.log(item.childNodes[0]);
+                alert(item.childNodes[0].textContent);
+            });
+        });
+        btns.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                const result = confirm('삭제하시겠습니까?');
+                event.stopPropagation();
+                if (result) {
+                    item.parentElement.remove();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
