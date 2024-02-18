@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1만 시간의 법칙</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="24.02.06_실습_10000_reset.css">
+    <link rel="stylesheet" href="24.02.06_실습_10000_common.css">
+    <link rel="stylesheet" href="24.02.06_실습_10000_style.css">
 </head>
 <body>
     <header class="cont-header">
@@ -21,14 +21,12 @@
         <form>
             <p class="txt-field">나는
                 <label class="a11y" for="lablField">훈련 분야</label>
-                <input type="text" id="lablField" required placeholder="예&#41;프로그래밍">
-                전문가가 될것이다.
+                <input type="text" id="lablField" required placeholder="예&#41;프로그래밍"> 전문가가 될것이다.
             </p>
             <p class="txt-time">
                 그래서 앞으로 매일 하루에
                 <label class="a11y" for="lablTime">훈련 시간</label>
-                <input type="number" id="lablTime" required placeholder="예&#41;5시간">
-                시간씩 훈련할 것이다.
+                <input type="number" id="lablTime" required placeholder="예&#41;5시간"> 시간씩 훈련할 것이다.
             </p>
             <button type="button" class="btn-common">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
         </form>
@@ -42,8 +40,29 @@
     </main>
     <footer class="cont-footer">
         <img src="images/weniv.png" alt="weniv">
-        <small>※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br>
-            수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</small>
+        <small>※본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br> 수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.※</small>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnCommon = document.querySelector('.btn-common');
+            const txtFieldInput = document.querySelector(".txt-field input");
+            const txtTimeInput = document.querySelector(".txt-time input");
+            const target = document.querySelector(".cont-result");
+
+            btnCommon.addEventListener('click', (event) => {
+                if (txtFieldInput.value == '' || txtTimeInput.value == '') {
+                    alert("입력되지 않았습니다.");
+                    txtFieldInput.value = '';
+                    txtTimeInput.value = '';
+                    target.style.display = 'none';
+                    return;
+                } else {
+                    const resultText = `당신은 <strong>${txtFieldInput.value}</strong> 전문가가 되기 위해서 대략 <strong>${parseInt(10000 / txtTimeInput.value)}일</strong> 이상 훈련하셔야 합니다 :&#41;`;
+                    target.innerHTML = resultText;
+                    target.style.removeProperty('display');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
