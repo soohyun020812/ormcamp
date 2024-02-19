@@ -11,6 +11,8 @@
 2. HTML
 3. CSS
 4. Java Script
+5. Bootstrap
+6. Django
 
 >**강의 정리**
 * https://selfnotes.tistory.com
