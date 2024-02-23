@@ -14,5 +14,8 @@
 >5. Bootstrap
 >6. Django
 
+>**프로젝트**
+>HTML, CSS, Java Script - 미니프로젝트
+
 >**강의 정리** <br>
 >https://selfnotes.tistory.com
