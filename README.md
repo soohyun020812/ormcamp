@@ -16,7 +16,8 @@
 
 >**프로젝트** <br>
 >HTML, CSS, Java Script - 미니프로젝트 <br>
->https://github.com/soohyun020812/Portfolio
+>https://github.com/soohyun020812/Portfolio <br>
+>Django 팀프로젝트
 
 >**강의 정리** <br>
 >https://selfnotes.tistory.com
