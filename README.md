@@ -13,6 +13,7 @@
 >4. Java Script
 >5. Bootstrap
 >6. Django
+>7. AWS
 
 >**프로젝트** <br>
 >HTML, CSS, Java Script - 미니프로젝트 <br>
